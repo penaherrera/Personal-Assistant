@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :reminders
-  
+  resources :reminders do
+    get 'index', on: :collection
+  end
   resources :notes do
     get 'index', on: :collection
   end
