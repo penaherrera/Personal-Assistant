@@ -24,6 +24,6 @@ test:
   <<: *default
   database: personal_assistant_test
 
-# production:
-#   <<: *default
-#   database: db/production.postgres
+production:
+  <<: *default
+  database: personal_assistant_production

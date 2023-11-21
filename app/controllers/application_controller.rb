@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
     private
 
     def require_login
-        #debugger
         token = request.headers['Authorization']&.sub('Bearer ', '')
         user = User.find_by(id: token)
         render json: { error: 'Unauthorized' }, status: :unauthorized unless user
