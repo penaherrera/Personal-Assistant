@@ -25,5 +25,4 @@ test:
   database: personal_assistant_test
 
 production:
-  <<: *default
-  database: personal_assistant_production
+  url: <%= ENV['DATABASE_URL'] %>
